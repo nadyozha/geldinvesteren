@@ -1,0 +1,1526 @@
+$Black: black
+$White: white
+$Blue: #3242CC
+$Dark: #0F385E
+*
+  outline: none !important
+img 
+  max-width: 100%
+  height: auto
+html 
+  width: 100%
+  height: 100%
+  overflow-x: hidden
+body
+  overflow-x: hidden
+  background-color: #fbfbfb
+  position: relative
+  height: 100%
+  font-family: 'Montserrat', sans-serif
+  @media (max-width: 990.98px)
+
+input::placeholder, textarea::placeholder
+  color: #0F385E
+  font-weight: 500
+  font-size: 12px
+  border: none
+  padding-left: 10px
+input, 
+  background-color: transparent
+  border: none
+
+button, input, a, textarea
+  &:focus
+      outline: none 
+button
+  transition: all 0.5s
+  color: $Blue
+  border: none
+  padding: 10px 20px
+  background-color: white
+  border-radius: 5px
+  font-size: 14px
+  letter-spacing: 0.5px
+
+button:hover
+  cursor: pointer
+
+a:hover
+  text-decoration: none
+
+h1 
+  font-weight: 600
+  font-size: 52px
+  line-height: 60px
+  
+  @media (max-width: 990.98px)
+    font-size: 40px
+    line-height: 50px
+    @media (max-width: 767.98px)
+      font-size: 30px
+      line-height: 40px
+p
+  font-size: 14px
+  line-height: 24px
+  color: $Dark
+  @media (max-width: 767.98px)
+    font-size: 12px
+    line-height: 20px
+
+h1, h2, h3, h4, h5, h6,
+  color: $Dark
+h2
+  font-weight: 600
+  font-size: 44px
+  line-height: 50px
+  @media (max-width: 990.98px)
+    font-size: 36px
+    line-height: 40px
+    @media (max-width: 767.98px)
+      font-size: 26px
+h3
+  font-weight: 600
+  font-size: 24px
+  line-height: 32px
+  @media (max-width: 767.98px)
+    font-size: 18px
+//preloader
+.preloader
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: $Blue
+  z-index: 999
+  opacity: 1
+  visibility: visible
+  video
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  img
+    position: relative
+    z-index: 2000
+  &.done
+      opacity: 0
+      visibility: hidden
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1200px
+//cariusel
+.form-row.owl-carousel
+  margin-left: 0
+  margin-right: 0
+
+.owl-main .owl-stage 
+  padding-left: 5px !important
+  // Прибить карусель к низу
+  display: flex
+  align-items: flex-end
+
+.owl-main [class*='col']
+  padding-left: 5px
+  padding-right: 5px
+// в зависимости от размера меняется иерархия карточки с классом col-xl-3
+@media (min-width: 1200px)
+  .owl-main > .col-xl-3
+    &:first-child
+      padding-left: 0
+
+@media (max-width: 1200px)
+  .owl-stage > .owl-item:first-child > .col-xl-3
+    padding-left: 0
+
+@media (max-width: 1199.98px)
+  .container-0 
+    max-width: 100%
+    padding-left: 0
+    padding-right: 0
+
+.btn-orange
+  background: #E8A82D
+  border-radius: 5px
+  color: white
+  font-weight: 600
+  font-size: 12px
+  line-height: 14px
+  padding: 14px 16px
+  transition: 0.3s
+  white-space: normal
+  letter-spacing: 0.5px
+  a
+    letter-spacing: 0.5px
+    font-size: 12px
+    color: white
+    font-weight: 600
+    width: 100%
+  &:hover
+    background: #edb957
+    font-size: 12px
+    color: white
+    line-height: 14px
+
+.btn-white
+  background: white
+  border-radius: 5px
+  border: 1px solid rgba(15, 56, 94, 0.2)
+  color: $Dark
+  font-weight: 600
+  font-size: 12px
+  line-height: 14px
+  padding: 14px 16px
+  transition: 0.3s
+  white-space: normal
+  letter-spacing: 0.5px
+  a
+    letter-spacing: 0.5px
+    font-size: 12px
+    color: $Dark
+    font-weight: 600
+    width: 100%
+  &:hover
+    background: #F3F5F7 !important
+    font-size: 12px
+    line-height: 14px
+    color: $Dark
+    background: white
+    border: 1px solid rgba(15, 56, 94, 0.2)
+  &_outline
+    background: transparent
+    border: 1px solid white
+    color: white
+
+.btn-arrow
+  display: inline
+  width: 7px
+  height: 12px
+
+  img
+    width: 6px
+    height: 12px
+    margin-left: 6px
+    color: white
+
+.fluid-menu
+  position: absolute
+  top: 0
+  z-index: 50
+  @media (max-width: 990.98px)
+    position: fixed
+    top: 0
+    background: rgba(50, 66, 204, 0.85)
+
+.menu-header
+  nav
+    padding: 0 8px
+
+    #sandwich
+      position: relative
+      width: 20px
+      height: 12px
+      cursor: pointer
+      transition: .3s
+      margin-left: 41px
+      z-index: 999
+      @media (min-width: 992px)
+        margin-top: 80px
+        margin-left: 0
+        margin-right: auto
+      &:before, span, &:after
+        content: ''
+        background-color: #fff
+        position: absolute
+        height: 2px
+        left: 0
+        right: 0
+        transition: .3s   
+        border-radius: 100px    
+      &:before
+        top: 0
+        transform-origin: 25% center
+        .menubar-in &
+          transform: rotate(45deg)
+      span
+        visibility: hidden
+        
+        .menubar-in &
+          width: 0
+      &:after
+        bottom: 0
+        transform-origin: 25% center
+        .menubar-in &
+          transform: rotate(-45deg)
+      &:hover 
+        opacity: .8
+
+    ul.navbar-nav
+      margin-right: 1rem
+      li.nav-item
+        line-height: 26px
+        margin-left: 30px
+        a.nav-link
+          font-weight: 500
+          font-size: 12px
+          color: white
+          padding: 0
+          border-bottom: 2px solid transparent
+          transition: 0.5s
+          line-height: 65px
+
+          &:hover
+            color: silver
+
+        a.nav-link.active
+          border-bottom: 1px solid white
+          @media (max-width: 991.98px)
+            border-bottom: 1px solid transparent
+
+    form
+      margin-left: auto
+      box-sizing: border-box
+      .group
+        position: relative
+        width: 100%
+        label
+          position: absolute
+          pointer-events: none
+          transition: 0.2s ease all
+          color: white
+          top: 2px
+          opacity: 0.6
+          font-weight: 300
+          font-size: 12px
+          left: 0
+          @media (max-width: 990.98px)
+            top: 17px
+        input
+          color: white
+          font-size: 12px
+          width: 100%
+          &:focus, &:valid 
+            ~ label
+              color: white
+              top: -12px
+              font-size: 9px
+            
+    button
+      margin-left: auto
+      color: $Blue
+      font-weight: 500
+      transition: 0.3s
+      letter-spacing: 0
+      max-width: 330px
+      &:hover
+        background-color: #F3F5F7
+        color: $Blue
+      @media (max-width: 1199.98px)
+        max-width: 175px
+
+    .logo
+      margin-right: 3rem
+      img
+        line-height: 26px
+        position: relative
+        top: -3px
+
+    .navbar-toggler
+      color: white
+      background-color: transparent
+      z-index: 100
+        
+  hr
+    border-top: 1px solid white
+    opacity: 0.5
+    width: 100%
+    margin: 0
+    padding: 0
+    position: relative
+    top: -2px
+    z-index: 120
+
+.first
+  h1, p
+    color: white
+
+  .full-rat_first
+    box-shadow: none
+    background-color: #fbfbfb
+    letter-spacing: 0
+
+  .carts
+    .cart:hover
+      box-shadow: 0px 6px 37px rgba(19, 44, 63, 0.19), 0px 2px 1px rgba(0, 0, 0, 0.11)
+    .cart
+      background-color: white
+      padding: 16px 12px
+      box-shadow: 0px 6px 23px rgba(19, 44, 63, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.11)
+      border-radius: 10px
+      min-height: 350px
+      transition: 0.3s
+      .cart-title
+        padding: 14px 0
+        .img_top_wrap
+          height: 60px
+          display: flex
+          align-items: center
+          justify-content: center
+          img
+            max-height: 100%
+        .number
+          position: absolute
+          left: 2px
+          top: 16px
+          background: #3242CC
+          border: 2px solid #FFFFFF
+          box-sizing: border-box
+          box-shadow: 0px 8px 22px rgba(19, 44, 63, 0.15)
+          width: 42px
+          height: 42px
+          padding: 5px
+          font-weight: 600
+          font-size: 18px
+          color: #FBFBFB
+
+        .number_orange
+          background: #E8A82D
+          left: -5px
+
+        .broker
+          width: 100%
+          display: block
+          margin-top: 1rem
+          background: #ebecfa
+          border-radius: 5px
+          color: #3242CC
+          font-weight: 500
+          font-size: 12px
+          padding: 8px
+          margin-top: 2rem
+          &:hover
+            background-color: darken(#ebecfa, 6%)
+
+        .online-broker
+          background: #eaf7ef
+          color: #27AE60
+          width: 100%
+          display: block
+          border-radius: 5px
+          font-weight: 500
+          font-size: 12px
+          padding: 8px
+          margin-top: 2rem
+          &:hover
+            background-color: darken(#eaf7ef, 6%)
+
+      .cart-body
+        margin-top: 1rem
+        h6
+          font-size: 12px
+          line-height: 12px
+          color: #0F385E
+          font-weight: normal
+          margin-bottom: 12px
+
+          img
+            width: 15px
+            height: 15px
+            color: #0F385E
+            margin-right: 10px
+
+        span.small-text
+          font-weight: 500
+          font-size: 9px
+          color: #0F385E
+          opacity: 0.4
+          position: relative
+          top: 30px
+          text-align: center
+              
+      .cart-footer
+        margin-top: 6rem
+        min-height: 120px
+        .btn-orange
+          width: 100%
+          margin-bottom: 12px
+        a
+          font-weight: 500
+          font-size: 12px
+          line-height: 14px
+          text-decoration-line: underline
+          color: #0F385E
+              
+    .cart_4
+      .cart-body
+        span.small-text
+            position: static
+      .cart-footer
+        margin-top: 0.75rem
+
+    .cart_2
+      .cart-footer
+        margin-top: 6rem
+
+    .cart_3
+      .cart-footer
+        margin-top: 4rem
+.second
+  p
+    margin-top: 22px
+    @media (max-width: 767.98px)
+      margin-top: 16px
+
+.little-carts-row
+  position: relative
+  z-index: 5
+  right: 0
+  margin-left: -.25rem
+  margin-right: -.25rem
+  > [class*="col"]
+    padding-left: .25rem
+    padding-right: .25rem
+    margin-top: .25rem
+    margin-bottom: .25rem
+
+
+
+  .little-cart
+    background: #FFFFFF
+    box-shadow: 0px 6px 23px rgba(19, 44, 63, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.11)
+    border-radius: 10px
+    font-weight: 300
+    font-size: 14px
+    color: #0F385E
+    text-align: center
+    transition: 0.3s
+    cursor: pointer
+    padding: 24px 29px
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: start
+    min-height: 80px
+    display: flex
+    flex-wrap: wrap
+    @media (max-width: 1199.98px)
+      padding: 24px 16px
+      @media (max-width: 991.98px)
+        padding: 24px 2px
+        @media (max-width: 767.98px)
+          padding: 24px
+          @media (max-width: 340px)
+            padding: 14px
+
+    .img-cart
+      padding-right: 2px
+      flex-basis: 30px
+      img
+        min-width: 48px!important
+        @media (max-width: 991.98px)
+          min-width: 36px!important
+          @media (max-width: 574.98px)
+            min-width: 48px!important
+
+    span
+      font-weight: 500
+    &:hover
+      box-shadow: 0px 10px 45px rgba(19, 44, 63, 0.19), 0px 2px 1px rgba(0, 0, 0, 0.11)
+      
+  .little-cart-home
+    @media (max-width: 991.98px)
+      padding: 24px 10px
+      justify-content: center
+      
+.cart-blog
+  background: #FFFFFF
+  box-shadow: 0px 6px 23px rgba(19, 44, 63, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.11)
+  border-radius: 10px
+  padding: 8px
+  height: 100%
+  display: flex
+  flex-direction: column
+  transition: 0.5s
+  &:hover
+    box-shadow: 0px 6px 37px rgba(19, 44, 63, 0.19), 0px 2px 1px rgba(0, 0, 0, 0.11)
+
+  .cart-blog-body
+    margin-top: 8px
+    padding: 16px
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    @media (max-width: 767.98px)
+      padding: 8px
+
+    img
+      width: 20px
+      margin-right: 12px
+      line-height: 20px
+
+    small
+      font-size: 12px
+      line-height: 12px
+      color: #0F385E
+      opacity: 0.7
+      line-height: 20px
+      margin-top: 3px
+      margin-right: 16px
+
+    h5
+      font-weight: 500
+      font-size: 24px
+      line-height: 32px
+      margin-top: 1rem
+
+    span
+      padding: 6px
+      background: rgba(50, 66, 204, 0.1)
+      border-radius: 39px
+      color: #3242CC
+      font-size: 12px
+      line-height: 14px
+      margin-right: 8px
+      margin-top: 8px
+      a
+        color: #3242CC
+
+footer
+  background-color: white
+  position: relative
+  
+  a, span
+    font-weight: 500
+    font-size: 12px
+    line-height: 12px
+    color: $Dark
+    @media (max-width: 575.98px)
+      line-height: 38px
+  .nav
+    li
+      a
+        padding-right: 26px
+        @media (max-width: 575px)
+          margin-right: 7px
+          padding-right: 18px
+          @media (max-width: 375px)
+            margin-top: 0
+            padding-right: 10px
+
+  hr
+    border-top: 1px solid $Dark
+    background-color: $Dark
+    opacity: 0.1
+//For beginners
+.faq-my-8
+  margin: 8rem 0
+
+.mt-6
+  margin-top: 6rem
+  @media (max-width: 574.98px)
+    margin-top: 9rem
+
+.mt-sm-6
+  margin-top: 150px
+  @media (max-width: 767.98px)
+    margin-top: 0
+@media (max-width: 767.98px)
+  .text-md-white
+    color: white
+.pos-rel
+  position: relative
+  margin: 5rem 0
+  padding-top: 100px
+.mt-100
+  margin-top: 220px
+  @media (max-width: 575.98px)
+    margin-top: 80px
+.wrap-bg
+  @media (max-width: 767.98px)
+    position: static
+  &:after
+    content: ""
+    width: 3000px
+    height: 557px
+    border-radius: 2000px 0 0 2000px
+    background-color: $Blue
+    position: absolute
+    top: 50%
+    left: 30px
+    transform: translateY(-50%)
+    z-index: -1
+    @media (max-width: 767.98px)
+      top: 0
+      left: 0
+      height: 658px
+      left: -135px
+      transform: none
+
+
+.book
+  .book_content
+    h2
+      color: #FBFBFB
+    p
+      color: #FBFBFB
+      margin-top: 1rem
+
+    button
+      margin-top: 1rem
+      letter-spacing: 0.5px
+//e-book
+.e-book
+  .e-book-first
+    h1
+      color: #FBFBFB
+    p
+      color: #FBFBFB
+      margin-top: 1rem
+
+  .successful
+    margin-top: 84px
+    @media (max-width: 767.98px)
+      margin-top: 15px
+    .get_now_form
+      position: relative
+      @media (max-width: 767.98px)
+        top: -100px
+      
+      form
+        box-sizing: border-box
+        .group
+          position: relative
+          label
+            position: absolute
+            pointer-events: none
+            transition: 0.2s ease all
+            color: $Dark
+            top: 2px
+            opacity: 0.6
+            font-weight: 300
+            font-size: 12px
+            left: 0
+          input
+            border-bottom: 1px solid silver
+            color: $Dark
+            font-size: 12px
+            width: 70%
+            display: block
+            @media (max-width: 767.98px)
+              width: 100%
+            
+            &:focus, &:valid 
+              ~ label
+                color: $Dark
+                top: -12px
+                font-size: 9px
+
+      .send
+        @media (max-width: 767.98px)
+          width: 100%
+          
+  .invest-cards
+    h2
+      color: white
+
+    .full-rating
+      background-color: transparent
+      color: #FBFBFB
+      border: 1px solid silver
+
+    .carts
+      @media (max-width: 768px)
+        padding-left: 16px
+
+.book_content
+  h2, p
+    color: white
+//news
+.menu-header-white
+  .naw-white
+    ul.navbar-nav 
+      li.nav-item
+        a.nav-link
+          color: $Dark
+          border-bottom: 1px solid transparent
+          &:hover
+            color: black
+          @media (max-width: 991px)
+            color: white
+        a.nav-link.active
+          border-bottom: 1px solid $Dark
+          @media (max-width: 991.98px)
+            border-bottom: 1px solid transparent           
+
+    form
+      margin-left: auto
+      box-sizing: border-box
+      .group
+        position: relative
+        width: 100%
+        label
+          position: absolute
+          pointer-events: none
+          transition: 0.2s ease all
+          color: $Dark
+          top: 2px
+          opacity: 0.6
+          font-weight: 300
+          font-size: 12px
+          left: 0
+          @media (max-width: 990.98px)
+            top: 17px
+            color: white
+        input
+          color: $Dark
+          font-size: 12px
+          width: 100%
+          &:focus, &:valid 
+            ~ label
+              color: $Dark
+              top: -12px
+              font-size: 9px
+        input
+          @media (max-width: 990.98px)
+            color: white
+            &:focus, &:valid 
+              ~ label
+                color: white
+
+    .navbar-toggler
+      color: $Dark
+    
+    .oranj
+      background: #E8A82D
+      color: white
+      font-weight: 500
+      @media (max-width: 991px)
+        background-color: white
+        color: $Dark
+
+  hr
+    border-top: 1px solid $Dark
+    opacity: 0.5
+
+.thert
+  background: none
+  h2
+    padding-right: 1rem
+    margin-bottom: 0
+      
+  button.btn-white
+    padding: 12px 14px 
+    color: #0F385E
+    transition: 0.3s
+    background-color: #fbfbfb
+    box-shadow: none
+    &:hover
+      background-color: #F3F5F7
+
+.last_card
+  .cart-white
+    background-color: #fbfbfb
+    padding: 3rem 2rem
+    box-shadow: 0px 6px 23px rgba(19, 44, 63, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.11)
+    border-radius: 10px
+
+    h2
+      font-weight: 600
+
+    button
+      @media (max-width: 768px)
+        width: 100%
+
+.background-img
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: -1
+
+.bottom-bg-img
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  z-index: -1
+//news-article
+.first-news-article
+  small
+    font-size: 12px
+    line-height: 12px
+    color: white
+    opacity: 0.7
+    line-height: 20px
+    margin-top: 3px
+    margin-right: 16px
+
+  span
+    padding: 6px 12px
+    background: rgba(50, 66, 204, 0.9)
+    border-radius: 39px
+    color: white
+    font-size: 12px
+    line-height: 14px
+    margin-right: 8px
+    text-align: center
+
+.h-320
+  height: 320px
+  padding-bottom: 10px
+  @media (max-width: 990.98px)   
+    height: 190px   
+    
+//compare_best
+.compare_best
+  .long-carts
+    .cart:hover
+      box-shadow: 0px 6px 37px rgba(19, 44, 63, 0.19), 0px 2px 1px rgba(0, 0, 0, 0.11)
+    .cart
+      background-color: white
+      padding: 0 2rem
+      box-shadow: 0px 6px 23px rgba(19, 44, 63, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.11)
+      border-radius: 10px
+      position: relative
+      transition: 0.3s
+      .l-vertival-line
+        border-left: 1px solid silver
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 44px 0 44px 30px
+        @media (max-width: 991.98px)
+          border: none
+          padding: 12px 0 12px 12px
+
+      .number
+        position: absolute
+        left: -25px
+        top: -5px
+        background: #3242CC
+        border: 2px solid #FFFFFF
+        box-sizing: border-box
+        box-shadow: 0px 8px 22px rgba(19, 44, 63, 0.15)
+        width: 42px
+        height: 42px
+        padding: 5px
+        font-weight: 600
+        font-size: 18px
+        color: #FBFBFB
+        text-align: center
+
+      .number_orange
+        background: #E8A82D
+        text-align: center
+          
+      .broker
+        width: 100%
+        display: block
+        background: #ebecfa
+        border-radius: 5px
+        color: #3242CC
+        font-weight: 500
+        font-size: 12px
+        padding: 8px
+        margin-top: 2rem
+
+        &:hover
+          background-color: darken(#ebecfa, 6%)
+
+      .online-broker
+        background: #eaf7ef
+        color: #27AE60
+        width: 100%
+        display: block
+        border-radius: 5px
+        font-weight: 500
+        font-size: 12px
+        padding: 8px
+        margin-top: 2rem
+
+        &:hover
+          background-color: darken(#eaf7ef, 6%)
+      
+      h6
+        font-size: 12px
+        line-height: 12px
+        color: $Dark
+        margin-bottom: 12px
+        @media (max-width: 565px)
+          font-size: 10px
+
+        img
+          width: 18px
+          height: 18px
+          color: $Dark
+          margin-right: 10px
+
+      .small-text
+        font-weight: 500
+        font-size: 10px
+        line-height: 18px
+        color: $Dark
+        opacity: 0.4
+
+      a
+        font-weight: 500
+        font-size: 12px
+        line-height: 14px
+        text-decoration-line: underline
+        color: $Dark
+        display: inline-block
+        margin-top: 14px
+  
+      .btn-white
+        width: 100%
+        
+        img
+          width: 14px
+          height: 14px
+//broker
+.mt-lg-7
+  margin-top: 10rem
+
+.btn_transparent
+  background-color: transparent
+  color: white
+  border: 1px solid silver
+  &:hover
+    background-color: #1217eb !important
+    color: white
+    border: 1px solid silver
+
+.broker
+  .broker-first
+    .cart-star
+      padding: 2rem
+      background: #FFFFFF
+      box-shadow: 0px 6px 23px rgba(19, 44, 63, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.11)
+      border-radius: 10px
+      margin-top: 3rem
+
+      img
+        width: 20px
+        height: 20px
+
+      span
+        margin-left: 1rem
+        font-size: 12px
+        line-height: 17px
+        color: $Dark
+
+    .carts
+      .cart
+        padding: 0 0 1.5rem 0
+
+        hr.horizont
+          opacity: 1
+          margin: 0
+
+      .cart-title
+        padding: 2rem
+
+      .cart-body
+        padding:  0.5rem 1rem
+        margin-top: 0
+        position: static
+
+        h6
+          font-size: 10px
+          line-height: 12px
+          color: #3242CC
+          margin: 0
+          font-weight: 500
+
+        a, span
+          font-size: 12px
+          line-height: 18px
+          color: $Dark
+
+        a
+          text-decoration-line: underline
+
+    .banner
+      margin-top: 1rem
+      background: #e7e9f6
+      border-radius: 10px
+      padding: 2rem
+      font-weight: 300
+      font-size: 14px
+      line-height: 24px
+      color: #3242CC
+      font-style: italic
+
+    h4
+      font-weight: 600
+      font-size: 24px
+      line-height: 32px
+
+    ul
+      margin-top: 1rem
+
+      li
+        font-size: 14px
+        line-height: 24px
+        color: $Dark
+        list-style-type: none
+
+        &:before
+          content: ""
+          background-image: url("../img/bullet.svg")
+          background-size: 20px 20px
+          width: 20px
+          height: 20px
+          display: block
+          position: absolute
+          left: 0.8rem
+    p
+      color: $Dark
+
+    p.mt-lg-7
+      margin-top: 7rem
+      @media (max-width: 990.98px)
+        margin-top: 0
+
+    .banner_2
+      margin-top: 1rem
+      background: url('../img/Rectangle64.jpg') no-repeat center
+      background-size: cover
+      border-radius: 10px
+      padding: 2rem  6rem
+      font-style: italic
+      font-weight: 600
+      font-size: 24px
+      color: #FBFBFB
+      @media (max-width: 768px)
+        padding: 1rem
+        margin-top: 2rem
+
+    .banner_3
+      background: #FFFFFF
+      margin-top: 1rem
+      box-shadow: 0px 8px 22px rgba(19, 44, 63, 0.07)
+      border-radius: 10px
+      padding: 2rem
+      @media (max-width: 768px)
+        padding: 1rem
+
+    .banner_4
+      font-style: normal
+
+      h6
+        font-weight: 600
+        font-size: 14px
+        line-height: 14px
+        color: #FBFBFB
+
+      p
+        font-size: 14px
+        line-height: 24px
+        color: #FBFBFB
+        font-weight: 300
+        margin-bottom: 0
+
+.FAQ
+  .faq-search
+    position: relative
+    margin-top: 3rem
+    
+  .faq-search
+    box-sizing: border-box
+    .group
+      position: relative
+      label
+        position: absolute
+        pointer-events: none
+        transition: 0.2s ease all
+        color: white
+        top: -3px
+        opacity: 0.6
+        font-weight: 300
+        font-size: 12px
+        left: 20px
+      input
+        border-bottom: 1px solid silver
+        color: white
+        font-size: 12px
+        width: 100%
+        display: block
+        height: 25px
+        padding-left: 20px
+        
+        &:focus, &:valid 
+          ~ label
+            color: white
+            top: -12px
+            font-size: 9px
+
+    .poisk
+      position: absolute
+      top: 0
+      left: 0
+  h4
+    font-weight: 600
+    font-size: 24px
+    line-height: 32px
+    color: #FBFBFB
+
+    span.span_2
+      font-weight: 600
+      font-size: 24px
+      line-height: 32px
+      color: #FBFBFB
+      opacity: 0.5
+      padding-left: 8px
+      background: none
+      margin: 0
+
+  .color_Bl
+    color: $Dark
+
+  .accordion
+    background-color: transparent
+    
+    .card
+      background: #FFFFFF
+      box-shadow: 0px 6px 23px rgba(19, 44, 63, 0.09), 0px 2px 1px rgba(0, 0, 0, 0.11)
+      border-radius: 10px !important
+      margin-top: 0.5rem
+
+      .card-header
+        background: #FFFFFF
+        transition: 0.3s
+        padding: 32px 40px
+        span
+          display: block
+          width: 30px
+          min-width: 30px
+          height: 30px
+          min-height: 30px
+          border: 1px solid silver
+          border-radius: 50%
+          text-align: center
+          background-color: white
+          margin-right: 0
+          padding: 7px
+          transform: rotate(0deg)
+          transition: 0.3s
+          user-select: none
+          img
+            opacity: 0.8
+            width: 12px
+            height: 12px
+            transition: 0.3s
+
+      [aria-expanded=true]
+        img
+          transform: rotate(180deg)
+
+      h5
+        font-weight: 600
+        font-size: 16px
+        color: $Dark
+        margin: 0
+
+      p
+        color: $Dark
+        opacity: 0.8
+//Not_found
+.Not_found
+  background-color: $Blue 
+  @media (max-width: 990.98px)
+    padding-top: 70px 
+  .img_404
+    position: absolute
+    top: 50%
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: 1
+    transform: translateY(-50%)
+  .not_found_404
+    .wrap-content 
+      position: relative
+      z-index: 5
+      height: 80vh
+      h3
+        color: white
+
+.index-bg
+  padding-top: 150px
+  position: relative
+  .video_wrap
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    height: 720px
+    video
+      width: 100%
+      height: 100%
+      object-fit: cover
+    img
+      position: absolute
+      left: 0
+      bottom: -1px
+      right: 0
+      width: 100%
+  @media (max-width: 990.98px)
+    padding-top: 130px
+
+.beginers-bg
+  padding-bottom: 253px
+  padding-top: 255px
+  background: url('../img/Rectangle4.png') center bottom no-repeat
+  background-size: cover
+  @media (max-width: 990.98px)
+    padding-bottom: 120px
+    padding-top: 110px
+    @media (max-width: 767.98px)
+      padding-top: 120px
+
+.broker-bg
+  padding-top: 150px
+  background: url('../img/Rectangle64.jpg') top center no-repeat
+  background-size: 100% 474px
+  @media (max-width: 990.98px)
+    background: url('../img/Rectangle70_small.png') top center no-repeat
+    background-size: 100% 650px
+    padding-top: 130px
+
+.compare_bg
+  padding-bottom: 200px
+  padding-top: 150px
+  background: url('../img/icon_sm/Rectangle00004.svg') center bottom no-repeat
+  background-size: cover
+  @media (max-width: 990.98px)
+    padding-top: 180px
+    @media (max-width: 767.98px)
+      padding-bottom: 110px
+      padding-top: 160px
+      @media (max-width: 575.98px)
+        padding-bottom: 80px
+        padding-top: 100px
+
+.book_bg
+  padding-top: 150px
+  padding-bottom: 200px
+  background: url('../img/icon_sm/777.svg') center bottom no-repeat
+  background-size: cover
+  @media (max-width: 990.98px)
+    padding-top: 100px
+    padding-bottom: 140px
+
+.faq_bg
+  padding-top: 150px
+  @media (max-width: 990.98px)
+    padding-top: 120px
+  &:before
+    content: ''
+    background: url('../img/icon_sm/faqq.svg') center bottom no-repeat
+    background-size: cover
+    position: absolute
+    top: 0
+    left: 0
+    height: 730px
+    width: 100%
+    @media (max-width: 768px)
+      padding-top: 60px
+
+.news-articl_bg
+  padding-top: 150px
+  padding-bottom: 150px
+  background: url('../img/icon_sm/MaskdddGroup.svg') center bottom no-repeat
+  background-size: cover
+  @media (max-width: 990.98px)
+    padding-top: 130px
+
+.news_no_bg
+  padding-top: 150px
+  @media (max-width: 990.98px)
+    padding-top: 100px
+
+.mt-7
+  margin-top: 7rem
+
+//e-book + broker
+.last_book
+  background: url('../img/icon_sm/Rectangle57.svg') top center no-repeat
+  background-size: cover
+  padding-top: 250px
+  padding-bottom: 200px
+  @media (max-width: 990.98px)
+    background: url('../img/icon_sm/Frame0150.svg') no-repeat
+    background-size: cover
+    padding-top: 200px
+    padding-bottom: 100px
+    @media (max-width: 575.98px)
+      padding-top: 140px
+      padding-bottom: 65px
+  .full-rating
+    background-color: transparent
+    border: 1px solid silver
+    color: white
+//news + compare + faq + search_results
+.last_card
+  background: url('../img/icon_sm/Rectangle057.svg') top center no-repeat
+  background-size: cover
+  padding-top: 120px
+  padding-bottom: 120px
+  @media (max-width: 990.98px)
+    padding-top: 70px
+    padding-bottom: 70px
+    @media (max-width: 767.98px)
+      padding-top: 50px
+      padding-bottom: 50px
+//beginers
+.book
+  background: url('../img/icon_sm/Group00058.svg') top center no-repeat
+  background-size: cover
+  padding-top: 120px
+  padding-bottom: 120px
+  @media (max-width: 990.98px)
+    padding-top: 70px
+    padding-bottom: 70px
+
+.row-1
+  margin-left: -.25rem
+  margin-right: -.25rem
+  > [class*="col"]
+    padding-left: .25rem
+    padding-right: .25rem
+
+@media (max-width: 1199px)
+  .menu-header nav .logo
+    margin-right: 1rem
+
+@media (max-width: 990.98px)
+  .menu-header
+    padding-top: 1rem
+
+    nav
+      transition: 0.3s
+      .nav-contente
+        position: fixed
+        top: 0
+        right: 0
+        bottom: 0
+        left: -100%
+        z-index: 99
+        height: 100vh
+        background-color: $Blue
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        transition: 0.3s
+        opacity: 0
+        max-width: 100%       
+
+        ul.navbar-nav
+          margin-right: 0
+          width: 90% 
+          @media (max-height: 420px)
+            margin-top: 2rem
+          @media (max-height: 400px)
+            margin-top: 3rem
+          li.nav-item
+            padding: 44px 0 0 0
+            margin-left: 0
+            @media (max-height: 420px)
+              padding: 0 0 12px 0
+            a.nav-link
+              font-weight: 600
+              font-size: 26px
+              line-height: normal
+              @media (max-height: 420px)
+                font-size: 16px
+              &:hover
+                border-bottom: 2px solid transparent
+              @media (max-width: 575.98px)
+                line-height: 10px
+        form
+          margin-top: 4rem
+          margin-left: 0
+          position: relative
+          width: 90%
+          @media (max-height: 419.98px)
+            margin-top: 0
+          
+          input
+            border-bottom: 1px solid #FBFBFB
+            line-height: 30px
+            height: 50px
+
+          input::placeholder
+            font-size: 16px
+            top: 1px
+            padding-left: 0
+
+          .wrap-search
+            position: absolute
+            right: 0
+            top: 10px
+
+            img
+              background-color: #4950cf
+              padding: 11px
+              border-radius: 46%
+
+        a
+          width: 90%
+          button
+            margin-left: 0
+            margin-top: 2rem
+            width: 100%
+            max-width: 100%
+            @media (max-height: 419.98px)
+              margin-top: 1rem
+
+      .nav-contente-active
+        display: block
+        display: flex
+        opacity: 1
+        height: 100vh
+        left: 0
+
+    .border-bottom-nav
+      margin-top: 1rem
+
+  .second
+    button.btn-orange
+      width: 100%
+  
+@media (max-width: 767.98px)
+  .menu-header
+    nav
+      .nav-contente
+        ul.navbar-nav
+          width: 90%
+        form
+          width: 90%
+          input
+            width: 100%
+        button
+          width: 90%  
+
+@media (max-width: 575.98px)
+  .last_card .cart-white
+    padding: 1rem
+
+    h2
+      font-size: 26px
+      line-height: 30px
+
+@media (min-width: 1200px)
+  .col-xl-500 
+    flex-basis: 500px
+    max-width: 500px
